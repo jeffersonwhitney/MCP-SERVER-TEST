@@ -38,6 +38,5 @@ def verificar_disponibilidade_agenda(data_consulta: str) -> str:
     return f"A data {data_consulta} está livre para agendamentos."
 
 if __name__ == "__main__":
-    # Rodando o servidor com o transporte STDIO (Ideal para processos locais, conforme sua aula)
-    print("Iniciando servidor MCP via STDIO...")
-    mcp.run()
+    print("Iniciando servidor MCP via SSE...")
+    mcp.run(transport="sse")
